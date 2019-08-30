@@ -1,0 +1,12 @@
+elements:
+  - type: Step
+    name: TestStep
+    inputs: []
+    outputs: []
+    method: Addition
+
+  - type: Step
+    name: TestStep2
+    inputs: []
+    outputs: []
+    method: Subtraction
