@@ -18,6 +18,12 @@ class AbstractStep:
         assert isinstance(self.outputs, list)
         assert isinstance(self.method, str)
 
+    def __str__(self) -> str:
+        return f"{self.type}{{name:{self.name}, inputs:{self.inputs}, outputs:{self.outputs}, method:{self.method}}}"
+
+    def __repr__(self) -> str:
+        return self.__str__()
+
     @abstractmethod
     def read_inputs(self, signal_library):
         """

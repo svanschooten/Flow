@@ -1,6 +1,6 @@
-from AbstactMethod import AbstractMethod
-from Addition import Addition
-from Subtraction import Subtraction
+from methods.AbstactMethod import AbstractMethod
+from methods.Addition import Addition
+from methods.Subtraction import Subtraction
 
 methods = {
     AbstractMethod.name: AbstractMethod,

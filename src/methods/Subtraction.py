@@ -1,4 +1,4 @@
-from AbstactMethod import AbstractMethod
+from methods.AbstactMethod import AbstractMethod
 
 
 class Subtraction(AbstractMethod):

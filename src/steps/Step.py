@@ -1,4 +1,4 @@
-from AbstractStep import AbstractStep
+from steps.AbstractStep import AbstractStep
 
 
 class Step(AbstractStep):

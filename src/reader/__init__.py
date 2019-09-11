@@ -1,3 +1,3 @@
-from Reader import Reader
+from reader.Reader import Reader
 
 Reader = Reader

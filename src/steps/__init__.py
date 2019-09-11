@@ -1,5 +1,5 @@
-from AbstractStep import AbstractStep
-from Step import Step
+from steps.AbstractStep import AbstractStep
+from steps.Step import Step
 
 types = {
     AbstractStep.type: AbstractStep,
