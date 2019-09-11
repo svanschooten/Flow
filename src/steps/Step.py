@@ -8,7 +8,7 @@ class Step(AbstractStep):
             self.input_data[signal] = signal_library.get(signal)
 
     def process(self, method: callable) -> None:
-        self.output_data = method.apply(self.input_data)
+        self.output_data = method.apply(self=method, args=self.input_data)
 
     def write_outputs(self, signal_library: dict) -> dict:
         for signal in self.outputs:

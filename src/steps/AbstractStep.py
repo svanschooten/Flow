@@ -19,10 +19,29 @@ class AbstractStep:
         assert isinstance(self.method, str)
 
     def __str__(self) -> str:
-        return f"{self.type}{{name:{self.name}, inputs:{self.inputs}, outputs:{self.outputs}, method:{self.method}}}"
+        return f"{self.type}{{name:{self.name}, inputs:{self.input_data}, outputs:{self.output_data}, umethod:{self.method}}} "
 
     def __repr__(self) -> str:
         return self.__str__()
+
+    def get_method(self) -> str:
+        return self.method
+
+    def set_input_data(self, input_data: dict) -> None:
+        self.input_data = input_data
+
+    def get_output_data(self) -> dict:
+        return self.output_data
+
+    def clear_inputs(self) -> None:
+        self.input_data = {}
+
+    def clear_outputs(self) -> None:
+        self.output_data = {}
+
+    def clear_data(self) -> None:
+        self.clear_inputs()
+        self.clear_outputs()
 
     @abstractmethod
     def read_inputs(self, signal_library: dict) -> None:
