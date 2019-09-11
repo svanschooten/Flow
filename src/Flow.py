@@ -22,7 +22,10 @@ def main():
     # step_library = Reader(path).process()
 
     # Print the content of the library
-    logging.info(step_library)
+    log_str = "Printing library:\n"
+    for name in step_library:
+        log_str += f"\t{name}: {step_library[name]}\n"
+    logger.info(log_str)
 
 
 if __name__ == '__main__':
